@@ -173,16 +173,16 @@ public class Constants {
             BackRight.setPracticeBotEncoder(2);
             
             //COMP BOT OFFSETS
-            FrontLeft.setCompBotOffset(60);
-            FrontRight.setCompBotOffset(28);
-            BackLeft.setCompBotOffset(11);
-            BackRight.setCompBotOffset(18);
+            FrontLeft.setCompBotOffset(80);
+            FrontRight.setCompBotOffset(148);
+            BackLeft.setCompBotOffset(293);
+            BackRight.setCompBotOffset(45);
 
             //PRACTIVE BOT OFFSETS
-            FrontLeft.setPracticeBotOffset(197);
-            FrontRight.setPracticeBotOffset(192);
-            BackLeft.setPracticeBotOffset(207);
-            BackRight.setPracticeBotOffset(241);
+            FrontLeft.setPracticeBotOffset(80);
+            FrontRight.setPracticeBotOffset(148);
+            BackLeft.setPracticeBotOffset(293);
+            BackRight.setPracticeBotOffset(45);
 
         }
     }
