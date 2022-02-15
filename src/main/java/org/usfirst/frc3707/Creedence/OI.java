@@ -167,6 +167,7 @@ public class OI {
 
         public double getRightStickXValue(){
             return controller.getRawAxis(rightStickXAxis);
+            //return controller.getRawAxis(2);
         }
 
         public double getRightStickYValue(){

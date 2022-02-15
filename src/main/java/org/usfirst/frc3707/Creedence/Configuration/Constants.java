@@ -140,8 +140,8 @@ public class Constants {
             FrontLeft.setCompBotSwerve(18);
             FrontLeft.setCompBotEncoder(0);
             // Front Left - Practice Robot
-            FrontLeft.setPracticeBotDrive(19);
-            FrontLeft.setPracticeBotSwerve(18);
+            FrontLeft.setPracticeBotDrive(0);
+            FrontLeft.setPracticeBotSwerve(4);
             FrontLeft.setPracticeBotEncoder(0);
 
             // Front Right - Competition Robot
@@ -149,9 +149,9 @@ public class Constants {
             FrontRight.setCompBotSwerve(16);
             FrontRight.setCompBotEncoder(3);
             // Front Left - Practice Robot
-            FrontRight.setPracticeBotDrive(17);
-            FrontRight.setPracticeBotSwerve(16); // 5?
-            FrontRight.setPracticeBotEncoder(3);
+            FrontRight.setPracticeBotDrive(1);
+            FrontRight.setPracticeBotSwerve(6); // 5?
+            FrontRight.setPracticeBotEncoder(1);
 
             // Back Left - Competition Robot
             BackLeft.setCompBotDrive(13);
@@ -159,18 +159,18 @@ public class Constants {
             BackLeft.setCompBotEncoder(1);
             BackLeft.setCompBotOffset(276);
             // Back Left - Practice Robot
-            BackLeft.setPracticeBotDrive(13);
-            BackLeft.setPracticeBotSwerve(12);
-            BackLeft.setPracticeBotEncoder(1);
+            BackLeft.setPracticeBotDrive(3);
+            BackLeft.setPracticeBotSwerve(7);
+            BackLeft.setPracticeBotEncoder(2);
 
             // Back Right - Competition Robot
             BackRight.setCompBotDrive(15);
             BackRight.setCompBotSwerve(14);
             BackRight.setCompBotEncoder(2);
             // Back Right - Practice Robot
-            BackRight.setPracticeBotDrive(15);
-            BackRight.setPracticeBotSwerve(14);
-            BackRight.setPracticeBotEncoder(2);
+            BackRight.setPracticeBotDrive(2);
+            BackRight.setPracticeBotSwerve(5);
+            BackRight.setPracticeBotEncoder(3);
             
             //COMP BOT OFFSETS
             FrontLeft.setCompBotOffset(80);
@@ -179,10 +179,10 @@ public class Constants {
             BackRight.setCompBotOffset(45);
 
             //PRACTIVE BOT OFFSETS
-            FrontLeft.setPracticeBotOffset(80);
-            FrontRight.setPracticeBotOffset(148);
-            BackLeft.setPracticeBotOffset(293);
-            BackRight.setPracticeBotOffset(45);
+            FrontLeft.setPracticeBotOffset(93);
+            FrontRight.setPracticeBotOffset(272);
+            BackLeft.setPracticeBotOffset(99);
+            BackRight.setPracticeBotOffset(108);
 
         }
     }
@@ -226,7 +226,7 @@ public class Constants {
 
     public static class CargoIntakeSystem {
 
-        private static int MotorControllerPWMChannel = 6;
+        private static int MotorControllerPWMChannel = 17;
         
         private static boolean MotorControllerInverted_CompBot = false;
         private static boolean MotorControllerInverted_PracticeBot = false;
@@ -293,8 +293,8 @@ public class Constants {
 
     public static class ClimbSystem {
         private static int climbBar = 8;
-        private static int climbGrab = 7;
-        private static int climbPullForward = 4;
+        private static int climbGrab = 18;
+        private static int climbPullForward = 19;
 
         public static int getClimbBar() {
             return climbBar;

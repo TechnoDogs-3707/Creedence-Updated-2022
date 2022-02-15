@@ -97,7 +97,7 @@ public class DriveSubsystem extends Subsystem {
      */
     public void drive(double directionX, double directionY, double rotation, boolean useGyro, boolean slowSpeed,
             boolean noPush) {
-        swerve.drive(directionX, directionY, rotation, false, slowSpeed, noPush);
+        swerve.drive(-directionX, -directionY, -rotation * 0.5, false, slowSpeed, noPush);
     }
 
     @Override
