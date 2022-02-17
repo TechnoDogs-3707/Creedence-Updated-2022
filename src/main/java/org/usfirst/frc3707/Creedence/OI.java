@@ -19,6 +19,8 @@ import org.usfirst.frc3707.Creedence.commands.hatch.thrustForwardCommand;
 import org.usfirst.frc3707.Creedence.commands.lift.hatchToBotCommand;
 import org.usfirst.frc3707.Creedence.commands.vision.GrabLineCommand;
 
+import edu.wpi.first.math.filter.SlewRateLimiter;
+
 //import org.usfirst.frc3707.Creedence.commands.slideUp;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -212,6 +214,9 @@ public class OI {
     public XBoxController driverController;
     public XBoxController operatorController;
 
+    SlewRateLimiter xLimiter = new SlewRateLimiter(2);
+    SlewRateLimiter yLimiter = new SlewRateLimiter(2);
+    SlewRateLimiter rotLimiter = new SlewRateLimiter(2);
 
     public OI() {
 
@@ -238,8 +243,8 @@ public class OI {
     }
 
     public void driveByJoystick(double directionX) {
-        Robot.driveSubsystem.drive(directionX, -Robot.oi.driverController.getLeftStickYValue(),
-                    -Robot.oi.driverController.getRightStickXValue(), false,
+        Robot.driveSubsystem.drive(xLimiter.calculate(directionX), yLimiter.calculate(-Robot.oi.driverController.getLeftStickYValue()),
+                    rotLimiter.calculate(-Robot.oi.driverController.getRightStickXValue()), false,
                     Robot.oi.driverController.getRightBumperPressed(), Robot.oi.driverController.getXButtonPressed());
     }
 }
